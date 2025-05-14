@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+# THIS IS POD NAME(kind)
+  name: nginx-pod
+
+  namespace: dev-env-namspace
+
+  labels:
+    app: nginx
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+    # ports is a list of ports to expose from the container
+    # containerPort is the port number on the container that is exposed
+    # protocol is an optional field that specifies the protocol for the port (default is TCP) 
+  ports:
+  - containerPort: 80
